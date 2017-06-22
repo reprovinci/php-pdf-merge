@@ -2,10 +2,13 @@
 
 PDF Merge library for PHP.
 
+A fork of "jurosh/pdf-merge"
+This was done to use setasign licensed code.
+
 Install in composer:
 
 ```json
-"jurosh/pdf-merge": "dev-master"
+"reprovinci/pdf-merge": "dev-master"
 ```
 
 ## Highlights
