@@ -8,13 +8,12 @@
   ],
   "homepage": "https://github.com/reprovinci/php-pdf-merge",
   "license": "MIT",
-  "minimum-stability": "dev",
   "repositories": [
     { "type": "vcs", "url": "https://bitbucket.org/reprovinci/fpdi" }
   ],
   "require": {
     "php": ">=5.3.0",
-    "reprovinci/fpdi": "dev-master"
+    "reprovinci/fpdi": "^1.6"
   },
   "authors": [
     {
