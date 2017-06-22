@@ -1,7 +1,7 @@
 {
   "name": "reprovinci/pdf-merge",
   "description": "PHP PDF Merger Forked from jurosh/pdf-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "pdf",
     "merge"
