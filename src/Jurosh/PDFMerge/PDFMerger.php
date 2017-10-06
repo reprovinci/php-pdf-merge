@@ -73,7 +73,15 @@ class PDFMerger {
                     $template = $fpdi->importPage($i);
                     $size = $fpdi->getTemplateSize($template);
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['w'], $size['h']));
+        	`			    $orientation = 'vertical';
+				            if ($size['w'] < $size['h']) {
+			                $orientation = 'vertical';
+				            } else {
+			                $orientation = 'horizontal';
+      				      }
+			
+
+                    $fpdi->AddPage($orientation, array($size['w'], $size['h']));
                     $fpdi->useTemplate($template);
                 }
             } else {
@@ -83,7 +91,14 @@ class PDFMerger {
                     }
                     $size = $fpdi->getTemplateSize($template);
 
-                    $fpdi->AddPage($file->getOrientationCode(), array($size['w'], $size['h']));
+										$orientation = 'vertical';
+                    if ($size['w'] < $size['h']) {
+                      $orientation = 'vertical';
+                    } else {
+                      $orientation = 'horizontal';
+                    }
+
+                    $fpdi->AddPage($orientation, array($size['w'], $size['h']));
                     $fpdi->useTemplate($template);
                 }
             }
