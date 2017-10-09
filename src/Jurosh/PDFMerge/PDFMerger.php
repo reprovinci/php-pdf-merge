@@ -73,12 +73,12 @@ class PDFMerger {
                     $template = $fpdi->importPage($i);
                     $size = $fpdi->getTemplateSize($template);
 
-		    $orientation = 'vertical';
-		    if ($size['w'] < $size['h']) {
-			$orientation = 'vertical';
-		    } else {
-			$orientation = 'horizontal';
-		    }
+		    $orientation = 'P';
+                    if ($size['w'] < $size['h']) {
+                        $orientation = 'P';
+                    } else {
+                        $orientation = 'L';
+                    }
 			
 
                     $fpdi->AddPage($orientation, array($size['w'], $size['h']));
@@ -91,11 +91,11 @@ class PDFMerger {
                     }
                     $size = $fpdi->getTemplateSize($template);
 
-										$orientation = 'vertical';
+		    $orientation = 'P';
                     if ($size['w'] < $size['h']) {
-                      $orientation = 'vertical';
+                        $orientation = 'P';
                     } else {
-                      $orientation = 'horizontal';
+                        $orientation = 'L';
                     }
 
                     $fpdi->AddPage($orientation, array($size['w'], $size['h']));
